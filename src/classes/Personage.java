@@ -76,6 +76,9 @@ public class Personage implements HasMood, Mobile, Reaction {
     public void react_to_thing(Thing thing, Personage persona) {
         if (persona.favorite_things.contains(thing)) {
             persona.setMood(Mood.HAPPY);
+            if (thing.name == "шнурок") {
+                persona.setTale(true);
+            }
         }
 
     }
